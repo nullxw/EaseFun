@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  EaseFun
 //
-//  Created by tarena on 15/11/10.
+//  Created by IncredibleMJ on 15/11/13.
 //  Copyright © 2015年 IncredibleMJ. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+Category.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self initializeWithApplication:application];
     return YES;
+}
+
+- (UIWindow *)window{
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [_window makeKeyAndVisible];
+    }
+    return _window;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

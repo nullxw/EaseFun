@@ -1,0 +1,28 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+inhibit_all_warnings!
+
+target 'EaseFun' do
+
+pod 'AFNetworking'
+pod 'MJExtension'
+pod 'WMPageController'
+pod 'Masonry'
+pod 'BlocksKit'
+pod 'CocoaLumberjack'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'MLTransition'
+pod 'RESideMenu'
+pod 'MWPhotoBrowser'
+pod 'TPKeyboardAvoiding'
+pod 'FMDB'
+pod 'CocoaAsyncSocket'
+pod 'Shimmer'
+pod 'SWTableViewCell'
+
+
+end
+
