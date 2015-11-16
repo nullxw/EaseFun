@@ -13,6 +13,16 @@
 		859158541BF85D8600D535AB /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 859158531BF85D8600D535AB /* NewsModel.m */; settings = {ASSET_TAGS = (); }; };
 		8591585C1BF8691000D535AB /* NewsNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8591585B1BF8691000D535AB /* NewsNetManager.m */; settings = {ASSET_TAGS = (); }; };
 		8591585F1BF8692100D535AB /* JokesNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8591585E1BF8692100D535AB /* JokesNetManager.m */; settings = {ASSET_TAGS = (); }; };
+		859158641BF874B800D535AB /* JokesViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 859158631BF874B800D535AB /* JokesViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		859158671BF874CA00D535AB /* NewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 859158661BF874CA00D535AB /* NewsViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		85EE61E41BF96A5800E42A6F /* NewsCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EE61E31BF96A5800E42A6F /* NewsCommonCell.m */; settings = {ASSET_TAGS = (); }; };
+		85EE61E71BF96D2700E42A6F /* ClipImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EE61E61BF96D2700E42A6F /* ClipImageView.m */; settings = {ASSET_TAGS = (); }; };
+		85EE61EA1BF96E5B00E42A6F /* NewsImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EE61E91BF96E5B00E42A6F /* NewsImagesCell.m */; settings = {ASSET_TAGS = (); }; };
+		85EE61ED1BF97F6200E42A6F /* NewsBigCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EE61EC1BF97F6200E42A6F /* NewsBigCoverCell.m */; settings = {ASSET_TAGS = (); }; };
+		85EFCF371BF8C8D2001B613C /* userIcon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85EFCF361BF8C8D2001B613C /* userIcon.bundle */; settings = {ASSET_TAGS = (); }; };
+		85EFCF3A1BF8CD0A001B613C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EFCF391BF8CD0A001B613C /* MainViewController.m */; settings = {ASSET_TAGS = (); }; };
+		85EFCF3F1BF8CFF1001B613C /* JokesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EFCF3E1BF8CFF1001B613C /* JokesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		85EFCF421BF8CFFC001B613C /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EFCF411BF8CFFC001B613C /* NewsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		85F5E4351BF582FB0078BBCE /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F5E4341BF582FB0078BBCE /* Factory.m */; settings = {ASSET_TAGS = (); }; };
 		85F5E4401BF583170078BBCE /* AppDelegate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F5E4381BF583170078BBCE /* AppDelegate+Category.m */; settings = {ASSET_TAGS = (); }; };
 		85F5E4421BF583170078BBCE /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F5E43B1BF583170078BBCE /* NSObject+Common.m */; settings = {ASSET_TAGS = (); }; };
@@ -73,6 +83,7 @@
 /* Begin PBXFileReference section */
 		312BADEA49A29974CB875BAF /* Pods-EaseFun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseFun.release.xcconfig"; path = "Pods/Target Support Files/Pods-EaseFun/Pods-EaseFun.release.xcconfig"; sourceTree = "<group>"; };
 		722FDD85DC5A625CF6437973 /* Pods-EaseFun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EaseFun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EaseFun/Pods-EaseFun.debug.xcconfig"; sourceTree = "<group>"; };
+		852F48C61BF9A5F800A1BF79 /* AllNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNewsCell.h; sourceTree = "<group>"; };
 		856A88371BF231E400815898 /* EaseFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856A883B1BF231E400815898 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		856A883D1BF231E400815898 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +97,25 @@
 		8591585B1BF8691000D535AB /* NewsNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsNetManager.m; sourceTree = "<group>"; };
 		8591585D1BF8692100D535AB /* JokesNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokesNetManager.h; sourceTree = "<group>"; };
 		8591585E1BF8692100D535AB /* JokesNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokesNetManager.m; sourceTree = "<group>"; };
+		859158621BF874B800D535AB /* JokesViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokesViewModel.h; sourceTree = "<group>"; };
+		859158631BF874B800D535AB /* JokesViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokesViewModel.m; sourceTree = "<group>"; };
+		859158651BF874CA00D535AB /* NewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewModel.h; sourceTree = "<group>"; };
+		859158661BF874CA00D535AB /* NewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewModel.m; sourceTree = "<group>"; };
+		85EE61E21BF96A5800E42A6F /* NewsCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommonCell.h; sourceTree = "<group>"; };
+		85EE61E31BF96A5800E42A6F /* NewsCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommonCell.m; sourceTree = "<group>"; };
+		85EE61E51BF96D2700E42A6F /* ClipImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipImageView.h; sourceTree = "<group>"; };
+		85EE61E61BF96D2700E42A6F /* ClipImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipImageView.m; sourceTree = "<group>"; };
+		85EE61E81BF96E5B00E42A6F /* NewsImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImagesCell.h; sourceTree = "<group>"; };
+		85EE61E91BF96E5B00E42A6F /* NewsImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImagesCell.m; sourceTree = "<group>"; };
+		85EE61EB1BF97F6200E42A6F /* NewsBigCoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsBigCoverCell.h; sourceTree = "<group>"; };
+		85EE61EC1BF97F6200E42A6F /* NewsBigCoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsBigCoverCell.m; sourceTree = "<group>"; };
+		85EFCF361BF8C8D2001B613C /* userIcon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = userIcon.bundle; sourceTree = "<group>"; };
+		85EFCF381BF8CD0A001B613C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		85EFCF391BF8CD0A001B613C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		85EFCF3D1BF8CFF1001B613C /* JokesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokesViewController.h; sourceTree = "<group>"; };
+		85EFCF3E1BF8CFF1001B613C /* JokesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokesViewController.m; sourceTree = "<group>"; };
+		85EFCF401BF8CFFC001B613C /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		85EFCF411BF8CFFC001B613C /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		85F5E3841BF56B670078BBCE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		85F5E4331BF582FB0078BBCE /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		85F5E4341BF582FB0078BBCE /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
@@ -310,6 +340,10 @@
 		856A88571BF2362F00815898 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85EE61E51BF96D2700E42A6F /* ClipImageView.h */,
+				85EE61E61BF96D2700E42A6F /* ClipImageView.m */,
+				85EE61E11BF96A2800E42A6F /* News */,
+				85EE61E01BF96A2800E42A6F /* Jokes */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +351,10 @@
 		856A88581BF2362F00815898 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				85EFCF381BF8CD0A001B613C /* MainViewController.h */,
+				85EFCF391BF8CD0A001B613C /* MainViewController.m */,
+				85EFCF3C1BF8CFDA001B613C /* News */,
+				85EFCF3B1BF8CFDA001B613C /* Jokes */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -324,6 +362,8 @@
 		856A885B1BF2362F00815898 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				859158601BF8748300D535AB /* Jokes */,
+				859158611BF8748300D535AB /* News */,
 				85F5E4B21BF5A97C0078BBCE /* BaseViewModel.h */,
 				85F5E4B31BF5A97C0078BBCE /* BaseViewModel.m */,
 			);
@@ -366,6 +406,63 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		859158601BF8748300D535AB /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				859158621BF874B800D535AB /* JokesViewModel.h */,
+				859158631BF874B800D535AB /* JokesViewModel.m */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		859158611BF8748300D535AB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				859158651BF874CA00D535AB /* NewsViewModel.h */,
+				859158661BF874CA00D535AB /* NewsViewModel.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		85EE61E01BF96A2800E42A6F /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		85EE61E11BF96A2800E42A6F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				85EE61E21BF96A5800E42A6F /* NewsCommonCell.h */,
+				85EE61E31BF96A5800E42A6F /* NewsCommonCell.m */,
+				85EE61E81BF96E5B00E42A6F /* NewsImagesCell.h */,
+				85EE61E91BF96E5B00E42A6F /* NewsImagesCell.m */,
+				85EE61EB1BF97F6200E42A6F /* NewsBigCoverCell.h */,
+				85EE61EC1BF97F6200E42A6F /* NewsBigCoverCell.m */,
+				852F48C61BF9A5F800A1BF79 /* AllNewsCell.h */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		85EFCF3B1BF8CFDA001B613C /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				85EFCF3D1BF8CFF1001B613C /* JokesViewController.h */,
+				85EFCF3E1BF8CFF1001B613C /* JokesViewController.m */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		85EFCF3C1BF8CFDA001B613C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				85EFCF401BF8CFFC001B613C /* NewsViewController.h */,
+				85EFCF411BF8CFFC001B613C /* NewsViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		85F5E4361BF583170078BBCE /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +485,7 @@
 				85F5E4B91BF5ACF30078BBCE /* LaunchScreen.storyboard */,
 				85F5E4B71BF5ACE00078BBCE /* Assets.xcassets */,
 				85F5E4B61BF5AC360078BBCE /* PrefixHeader.pch */,
+				85EFCF361BF8C8D2001B613C /* userIcon.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -611,6 +709,7 @@
 				85F5E57A1BF5B0480078BBCE /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				85F5E5681BF5B0480078BBCE /* .gitignore in Resources */,
 				85F5E4BC1BF5ACFC0078BBCE /* Main.storyboard in Resources */,
+				85EFCF371BF8C8D2001B613C /* userIcon.bundle in Resources */,
 				85F5E5701BF5B0480078BBCE /* UMSCommentInputController.xib in Resources */,
 				85F5E5761BF5B0480078BBCE /* UMSShareListController.xib in Resources */,
 				85F5E5831BF5B0480078BBCE /* ios-social-sdk-login-quick.html in Resources */,
@@ -695,18 +794,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F5E4441BF583170078BBCE /* NSString+QRCode.m in Sources */,
+				859158641BF874B800D535AB /* JokesViewModel.m in Sources */,
 				85F5E56A1BF5B0480078BBCE /* PSCollectionView.m in Sources */,
+				85EFCF3A1BF8CD0A001B613C /* MainViewController.m in Sources */,
 				8591585C1BF8691000D535AB /* NewsNetManager.m in Sources */,
+				85EE61ED1BF97F6200E42A6F /* NewsBigCoverCell.m in Sources */,
+				85EFCF421BF8CFFC001B613C /* NewsViewController.m in Sources */,
 				85F5E4431BF583170078BBCE /* NSString+PJR.m in Sources */,
 				85F5E4B41BF5A97C0078BBCE /* BaseViewModel.m in Sources */,
 				85F5E4351BF582FB0078BBCE /* Factory.m in Sources */,
+				85EE61E41BF96A5800E42A6F /* NewsCommonCell.m in Sources */,
 				85F5E4AE1BF5A9080078BBCE /* BaseModel.m in Sources */,
 				85F5E4401BF583170078BBCE /* AppDelegate+Category.m in Sources */,
+				85EE61EA1BF96E5B00E42A6F /* NewsImagesCell.m in Sources */,
 				856A883F1BF231E400815898 /* AppDelegate.m in Sources */,
+				85EFCF3F1BF8CFF1001B613C /* JokesViewController.m in Sources */,
 				85F5E56B1BF5B0480078BBCE /* PSCollectionViewCell.m in Sources */,
 				856A883C1BF231E400815898 /* main.m in Sources */,
+				85EE61E71BF96D2700E42A6F /* ClipImageView.m in Sources */,
 				859158541BF85D8600D535AB /* NewsModel.m in Sources */,
 				859158511BF858EC00D535AB /* JokesModel.m in Sources */,
+				859158671BF874CA00D535AB /* NewsViewModel.m in Sources */,
 				85F5E5671BF5B0480078BBCE /* iCarousel.m in Sources */,
 				85F5E4B11BF5A91E0078BBCE /* BaseNetManager.m in Sources */,
 				8591585F1BF8692100D535AB /* JokesNetManager.m in Sources */,

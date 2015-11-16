@@ -12,7 +12,7 @@
 
 @implementation JokesNetManager
 
-+(id)getJokesModelWithType:(JokesType)type pageId:(NSInteger)pageId timeInterval:(NSInteger)timeInterval completionHandler:(void (^)(id, NSError *))completionHandler{
++(id)getJokesModelWithType:(JokesType)type pageId:(NSInteger)pageId completionHandler:(void (^)(id, NSError *))completionHandler{
     NSString *path=nil;
     switch (type) {
         case JokesTypeSuggest: {
@@ -43,7 +43,7 @@
             break;
         }
     }
-    return [self GET:[NSString stringWithFormat:kJokesPath,path,pageId,timeInterval] parameters:nil completionHandler:^(id responseObj, NSError *error) {
+    return [self GET:[NSString stringWithFormat:kJokesPath,path,pageId,kCurrentTimeInterval] parameters:nil completionHandler:^(id responseObj, NSError *error) {
         completionHandler([JokesModel mj_objectWithKeyValues:responseObj],error);
     }];
 }

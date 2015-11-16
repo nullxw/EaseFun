@@ -20,6 +20,6 @@ typedef NS_ENUM(NSUInteger, JokesType) {
 
 @interface JokesNetManager : BaseNetManager
 
-+(id)getJokesModelWithType:(JokesType)type pageId:(NSInteger)pageId timeInterval:(NSInteger)timeInterval completionHandler:(void(^)(id model,NSError *error))completionHandler;
++(id)getJokesModelWithType:(JokesType)type pageId:(NSInteger)pageId completionHandler:(void(^)(id model,NSError *error))completionHandler;
 
 @end

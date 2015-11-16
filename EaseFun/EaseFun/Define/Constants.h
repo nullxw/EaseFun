@@ -8,6 +8,15 @@
 #ifndef Constants_h
 #define Constants_h
 
+/**左侧图片宽度*/
+#define kiconWidth 60
+#define kTitleSize 15
+#define kDescSize 12
+#define kCommentSize 10
+
+/**当前时间距离1970的秒数*/
+#define kCurrentTimeInterval ((NSInteger)[[NSDate date]timeIntervalSince1970])
+
 /** 导航栏题目文字大小 */
 #define kNaviTitleFontSize   24.0
 /** 导航栏题目文字颜色 */
