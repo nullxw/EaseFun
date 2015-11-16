@@ -50,4 +50,7 @@
 
 @end
 
+@implementation NewsDataListVideoModel
+
+@end
 

@@ -8,7 +8,9 @@
 
 #import "BaseModel.h"
 
-@class NewsDataModel,NewsDataListModel,ListPicsModel,ListPicsListModel,ListCommentCountInfoModel;
+@class NewsDataModel,NewsDataListModel,ListPicsModel,ListPicsListModel,ListCommentCountInfoModel,NewsDataListVideoModel;
+
+@class VideoInfoModel;
 @interface NewsModel : BaseModel
 
 @property (nonatomic, assign) NSInteger status;
@@ -59,6 +61,28 @@
 @property (nonatomic, assign) BOOL isFocus;
 
 @property (nonatomic, strong) ListPicsModel *pics;
+
+@property (nonatomic,strong) NewsDataListVideoModel *videoInfo;
+
+@end
+
+@interface NewsDataListVideoModel : NSObject
+
+@property (nonatomic, copy) NSString *pic;
+
+@property (nonatomic, copy) NSString *runtime;
+
+@property (nonatomic, copy) NSString *kpic;
+
+@property (nonatomic, assign) NSInteger playnumber;
+
+@property (nonatomic, copy) NSString *video_id;
+
+@property (nonatomic, copy) NSString *type;
+
+@property (nonatomic, assign) BOOL widtwidth;
+
+@property (nonatomic, copy) NSString *url;
 
 @end
 

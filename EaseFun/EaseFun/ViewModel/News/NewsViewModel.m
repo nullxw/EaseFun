@@ -30,18 +30,17 @@
         self.focusImages=nil;
     }
     self.dataTask=[NewsNetManager getNewsModelWithPageId:_pageId completionHandler:^(NewsModel *model, NSError *error) {
-        [self.dataArr addObjectsFromArray:model.data.list];
-        //获取焦点图片
-        NSMutableArray *URLs=[NSMutableArray new];
-        for(NewsDataListModel *obj in model.data.list){
-            if([obj isFocus]){
-                NSArray *list=obj.pics.list;
-                for(ListPicsListModel *subObj in list){
-                    [URLs addObject:[NSURL URLWithString:subObj.kpic]];
+        if(_pageId == 1){
+            //获取焦点图片
+            NSMutableArray *URLs=[NSMutableArray new];
+            for(NewsDataListModel *obj in model.data.list){
+                if([obj isFocus]){
+                    [URLs addObject:[NSURL URLWithString:obj.kpic]];
                 }
-                self.focusImages=[URLs copy];
             }
+            self.focusImages=[URLs copy];
         }
+        [self.dataArr addObjectsFromArray:model.data.list];
         completionHandle(error);
     }];
 }
@@ -50,41 +49,62 @@
     return self.dataArr.count;
 }
 
--(NewsDataListModel *)modelForRow:(NSInteger)row{
+-(NSInteger)focusImageCount{
+    return self.focusImages.count;
+}
+
+-(NewsDataListModel *)newsModelForRow:(NSInteger)row{
     return self.dataArr[row];
 }
 
 -(NSString *)titleForRow:(NSInteger)row{
-    return [self modelForRow:row].title;
+    return [self newsModelForRow:row].title;
 }
 /**Cell左侧图片 / 视频封面 */
 -(NSURL *)iconURLForRow:(NSInteger)row{
-    return [NSURL URLWithString:[self modelForRow:row].kpic];
+    return [NSURL URLWithString:[self newsModelForRow:row].kpic];
 }
 /**副标题*/
 -(NSString *)introForRow:(NSInteger)row{
-    return [self modelForRow:row].intro;
+    return [self newsModelForRow:row].intro;
 }
 -(NSString *)commentCountForRow:(NSInteger)row{
-    return [NSString stringWithFormat:@"%ld评论",[self modelForRow:row].commentCountInfo.total];
+    double count =[self newsModelForRow:row].commentCountInfo.total;
+    if(count >= 10000){
+        count = count/10000.0;
+        return [NSString stringWithFormat:@"%.1f万评论",count];
+    }
+    return [NSString stringWithFormat:@"%ld评论",(NSInteger)count];
+}
+-(BOOL)containsBigCoverForRow:(NSInteger)row{
+    NewsDataListModel *model=[self newsModelForRow:row];
+    return model.bpic.length != 0;
+}
+
+-(BOOL)containsVideoForRow:(NSInteger)row{
+    return [[self newsModelForRow:row].category isEqualToString:@"video"];
 }
 -(BOOL)containsImagesForRow:(NSInteger)row{
-    return [[self modelForRow:row].category isEqualToString:@"hdpic"];
-}
--(BOOL)containsVideoForRow:(NSInteger)row{
-    return [[self modelForRow:row].category isEqualToString:@"video"];
+    return [[self newsModelForRow:row].category isEqualToString:@"hdpic"];
 }
 /**Cell中三张图片*/
 -(NSArray *)imageURLsForRow:(NSInteger)row{
     NSMutableArray *URLs=[NSMutableArray new];
-    for(ListPicsListModel *obj in [self modelForRow:row].pics.list){
+    for(ListPicsListModel *obj in [self newsModelForRow:row].pics.list){
         [URLs addObject:[NSURL URLWithString:obj.kpic]];
     }
     return [URLs copy];
 }
 /**跳转链接*/
 -(NSURL *)linkForRow:(NSInteger)row{
-    return [NSURL URLWithString:[self modelForRow:row].link];
+    if([self containsVideoForRow:row]){
+        return [NSURL URLWithString:[self newsModelForRow:row].videoInfo.url];
+    }
+    return [NSURL URLWithString:[self newsModelForRow:row].link];
+}
+
+-(NSURL *)bigCoverURLForRow:(NSInteger)row{
+    return [NSURL URLWithString:[self newsModelForRow:row].bpic];
 }
 
 @end

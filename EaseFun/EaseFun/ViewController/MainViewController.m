@@ -28,7 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tabBar.translucent=NO;
-    self.viewControllers=@[[NewsViewController new],[JokesViewController new]];
+    self.viewControllers=@[
+                           [[UINavigationController alloc]initWithRootViewController:[NewsViewController new]],
+                           [[UINavigationController alloc]initWithRootViewController:[JokesViewController new]]
+                           ];
 }
 
 

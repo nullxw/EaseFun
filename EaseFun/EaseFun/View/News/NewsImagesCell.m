@@ -8,7 +8,7 @@
 
 #import "NewsImagesCell.h"
 
-#define kImageSpace 5
+
 
 @implementation NewsImagesCell
 
@@ -17,8 +17,9 @@
         _titleLB = [[UILabel alloc] init];
         [self.contentView addSubview:_titleLB];
         [_titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.mas_equalTo(5);
-            make.right.mas_lessThanOrEqualTo(-5);
+            make.left.mas_equalTo(kleftRightPadding);
+            make.top.mas_equalTo(kTopPadding);
+            make.right.mas_equalTo(-kleftRightPadding);
         }];
         _titleLB.font=[UIFont systemFontOfSize:kTitleSize];
     }
@@ -31,8 +32,9 @@
         [self.contentView addSubview:_iconIV1];
         [_iconIV1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leftMargin.mas_equalTo(self.titleLB.mas_leftMargin);
-            make.top.mas_equalTo(self.titleLB.mas_bottom).mas_equalTo(2);
-            make.size.mas_equalTo(CGSizeMake((kWindowW-4*kImageSpace)/3, kiconWidth));
+            make.top.mas_equalTo(self.titleLB.mas_bottom).mas_equalTo(5);
+            CGFloat width=(kWindowW-2*kImageSpace-2*kleftRightPadding)/3;
+            make.size.mas_equalTo(CGSizeMake(width, width * 0.618));
         }];
     }
     return _iconIV1;
@@ -71,7 +73,7 @@
         [_commentLB mas_makeConstraints:^(MASConstraintMaker *make) {
             make.rightMargin.mas_equalTo(self.iconIV3.mas_rightMargin);
             make.top.mas_equalTo(self.iconIV1.mas_bottom).mas_equalTo(5);
-            make.bottom.mas_equalTo(-2);
+            make.bottom.mas_equalTo(-kBottomPadding);
         }];
         _commentLB.font=[UIFont systemFontOfSize:kCommentSize];
         _commentLB.textColor=[UIColor lightGrayColor];

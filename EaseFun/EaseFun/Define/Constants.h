@@ -8,11 +8,20 @@
 #ifndef Constants_h
 #define Constants_h
 
-/**左侧图片宽度*/
-#define kiconWidth 60
-#define kTitleSize 15
+/**文字大小*/
+#define kTitleSize 17
 #define kDescSize 12
 #define kCommentSize 10
+
+#define kCommentWidth 60
+
+/**左侧图片宽度*/
+#define kiconWidth 60
+/**间隔*/
+#define kTopPadding 10
+#define kleftRightPadding 5
+#define kBottomPadding 5
+#define kImageSpace 10
 
 /**当前时间距离1970的秒数*/
 #define kCurrentTimeInterval ((NSInteger)[[NSDate date]timeIntervalSince1970])

@@ -15,9 +15,9 @@
         _iconIV = [[ClipImageView alloc] init];
         [self.contentView addSubview:_iconIV];
         [_iconIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.mas_equalTo(5);
+            make.left.mas_equalTo(kleftRightPadding);
+            make.top.mas_equalTo(kTopPadding);
             make.size.mas_equalTo(CGSizeMake(kiconWidth, kiconWidth));
-            make.bottom.mas_equalTo(-5);
         }];
     }
     return _iconIV;
@@ -30,7 +30,7 @@
         [_titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
             make.topMargin.mas_equalTo(self.iconIV.mas_topMargin).mas_equalTo(2);
             make.left.mas_equalTo(self.iconIV.mas_right).mas_equalTo(10);
-            make.right.mas_lessThanOrEqualTo(-5);
+            make.right.mas_equalTo(-kleftRightPadding);
         }];
         _titleLB.font=[UIFont systemFontOfSize:kTitleSize];
     }
@@ -45,10 +45,10 @@
             make.leftMargin.mas_equalTo(self.titleLB.mas_leftMargin);
             make.top.mas_equalTo(self.titleLB.mas_bottom).mas_equalTo(5);
             make.rightMargin.mas_equalTo(self.titleLB.mas_rightMargin);
-            make.bottom.mas_equalTo(self.iconIV.mas_bottom).mas_equalTo(-2);
         }];
         _descLB.textColor=[UIColor lightGrayColor];
         _descLB.font=[UIFont systemFontOfSize:kDescSize];
+        _descLB.numberOfLines=0;
     }
     return _descLB;
 }
@@ -59,8 +59,9 @@
         [self.contentView addSubview:_commentLB];
         [_commentLB mas_makeConstraints:^(MASConstraintMaker *make) {
             make.rightMargin.mas_equalTo(self.titleLB.mas_rightMargin);
-            make.bottomMargin.mas_equalTo(self.descLB.mas_bottomMargin);
-            make.width.mas_lessThanOrEqualTo(40);
+            make.top.mas_equalTo(self.iconIV.mas_bottom).mas_equalTo(2);
+            make.bottom.mas_equalTo(-kBottomPadding);
+            make.width.mas_lessThanOrEqualTo(kCommentWidth);
         }];
         _commentLB.font=[UIFont systemFontOfSize:kCommentSize];
         _commentLB.textColor=[UIColor lightGrayColor];

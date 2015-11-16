@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
-    self.window.rootViewController=[MainViewController new];
+    self.window.rootViewController=[MainViewController sharedInstance];
     return YES;
 }
 
